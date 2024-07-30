@@ -1,0 +1,304 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.simple_car.door_open": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"door0": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							-50,
+							0
+						]
+					}
+				},
+				"door1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							50,
+							0
+						]
+					}
+				},
+				"door3": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							-50,
+							0
+						]
+					}
+				},
+				"door2": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							50,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.simple_car.door_close": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"door0": {
+					"rotation": {
+						"0.0": [
+							0,
+							-50,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"door1": {
+					"rotation": {
+						"0.0": [
+							0,
+							50,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"door3": {
+					"rotation": {
+						"0.0": [
+							0,
+							-50,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"door2": {
+					"rotation": {
+						"0.0": [
+							0,
+							50,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.simple_car.door_idle": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"door0": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"door1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"door3": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"door2": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.simple_car.move": {
+			"loop": true,
+			"bones": {
+				"tire0": {
+					"rotation": [
+						"variable.move_front",
+						0,
+						0
+					]
+				},
+				"tire1": {
+					"rotation": [
+						"variable.move_front",
+						0,
+						0
+					]
+				},
+				"wheel1": {
+					"rotation": [
+						"variable.move_front",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.simple_car.move_back": {
+			"loop": true,
+			"bones": {
+				"tire0": {
+					"rotation": [
+						"variable.move_back",
+						0,
+						0
+					]
+				},
+				"tire1": {
+					"rotation": [
+						"variable.move_back",
+						0,
+						0
+					]
+				},
+				"wheel1": {
+					"rotation": [
+						"variable.move_back",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.simple_car.idle": {
+			"loop": true,
+			"bones": {
+				"tire0": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				},
+				"tire1": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				},
+				"wheel1": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.simple_car.turn": {
+			"loop": true,
+			"bones": {
+				"steering_wheel": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						0,
+						0,
+						"0-math.clamp(query.yaw_speed/1.5,-70,70)"
+					]
+				},
+				"tire0": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						0,
+						"math.clamp(query.yaw_speed/2,-30,30)",
+						0
+					]
+				},
+				"tire1": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						0,
+						"math.clamp(query.yaw_speed/2,-40,40)",
+						0
+					]
+				}
+			}
+		}
+	}
+}

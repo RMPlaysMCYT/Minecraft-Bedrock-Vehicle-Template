@@ -1,0 +1,46 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.simple_car_convertible.roof_switch": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"roof_idle"
+					],
+					"transitions": [
+						{
+							"convert1": "query.property('simple_car:doorsys')==0?0:0"
+						}
+					]
+				},
+				"convert1": {
+					"animations": [
+						"convert1"
+					],
+					"transitions": [
+						{
+							"idle": "!query.property('simple_car:doorsys')==0?0:0"
+						},
+						{
+							"convert2": "!query.property('simple_car:doorsys')==0?2:0"
+						}
+					]
+				},
+				"convert2": {
+					"animations": [
+						"convert2"
+					],
+					"transitions": [
+						{
+							"convert1": "query.property('simple_car:doorsys')==0?2:0"
+						},
+						{
+							"convert2": "!query.property('simple_car:doorsys')==0?1:0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+pack.name=RM's Simple Car Addon RP
+pack.description=Addon by RMPlaysMC YT with several tools and technologies used in this addon pack, Drive up an see the difference
+
+entity.simple_car:simple_car1.name=Simple Car1
+entity.simple_car:simple_car_convertible.name=Simple Car Convertible
+
+item.spawn_egg.entity.simple_car:simple_car1.name=Spawn Simple Car1
+item.spawn_egg.entity.simple_car:simple_car_convertible.name=Spawn Simple Car Convertible

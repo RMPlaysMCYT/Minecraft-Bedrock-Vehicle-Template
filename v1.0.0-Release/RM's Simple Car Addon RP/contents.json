@@ -1,0 +1,95 @@
+{
+   "content" : [
+      {
+         "path" : "animations/simple_car_convertible.animation.json"
+      },
+      {
+         "path" : "animations/simple_car.animation.json"
+      },
+      {
+         "path" : "animation_controllers/simple_car.rp.ac.json"
+      },
+      {
+         "path" : "models/blocks/custom_trapdoor.geo.json"
+      },
+      {
+         "path" : "animation_controllers/simple_car_convertible2.animation_controllers.json"
+      },
+      {
+         "path" : "animation_controllers/simple_car_convertible.animation_controllers.json"
+      },
+      {
+         "path" : "biomes_client.json"
+      },
+      {
+         "path" : "models/blocks/custom_fence_gate.geo.json"
+      },
+      {
+         "path" : "contents.json"
+      },
+      {
+         "path" : "models/entity/simple_car_convertible.json"
+      },
+      {
+         "path" : "blocks.json"
+      },
+      {
+         "path" : "models/blocks/custom_stairs.geo.json"
+      },
+      {
+         "path" : "entity/simple_car.json"
+      },
+      {
+         "path" : "entity/simple_car_convertible.json"
+      },
+      {
+         "path" : "textures/entity/simple_car.png"
+      },
+      {
+         "path" : "sounds/sound_definitions.json"
+      },
+      {
+         "path" : "manifest.json"
+      },
+      {
+         "path" : "models/blocks/custom_slab.geo.json"
+      },
+      {
+         "path" : "textures/item_texture.json"
+      },
+      {
+         "path" : "models/blocks/custom_stairs_upsidedown.geo.json"
+      },
+      {
+         "path" : "models/entity/simple_car.json"
+      },
+      {
+         "path" : "pack_icon.png"
+      },
+      {
+         "path" : "render_controllers/custom_boat.render_controller.json"
+      },
+      {
+         "path" : "sounds.json"
+      },
+      {
+         "path" : "textures/bridge.png"
+      },
+      {
+         "path" : "texts/en_US.lang"
+      },
+      {
+         "path" : "texts/languages.json"
+      },
+      {
+         "path" : "textures/flipbook_textures.json"
+      },
+      {
+         "path" : "textures/terrain_texture.json"
+      },
+      {
+         "path" : "ui/how_to_play_common.json"
+      }
+   ],
+   "version" : 1
+}

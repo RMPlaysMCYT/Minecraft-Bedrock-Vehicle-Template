@@ -1,0 +1,41 @@
+{
+   "content" : [
+      {
+         "path" : "functions/tick.json"
+      },
+      {
+         "path" : "animation_controllers/car_convertible.bpac.json"
+      },
+      {
+         "path" : "loot_tables/empty.json"
+      },
+      {
+         "path" : "pack_icon.png"
+      },
+      {
+         "path" : "contents.json"
+      },
+      {
+         "path" : "entities/simple_car_convertible.json"
+      },
+      {
+         "path" : "scripts/mainSimpleCar.js"
+      },
+      {
+         "path" : "entities/simple_car.json"
+      },
+      {
+         "path" : "manifest.json"
+      },
+      {
+         "path" : "scripts/System/main1.js"
+      },
+      {
+         "path" : "texts/en_US.lang"
+      },
+      {
+         "path" : "texts/languages.json"
+      }
+   ],
+   "version" : 1
+}
