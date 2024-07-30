@@ -12,7 +12,7 @@ This Template were being applicable for those addon creators who use this templa
 - Custom Camera for aerial vehicles
 
 # Showcase Video:
-[(https://img.youtube.com/vi/pXjF9WiAUCM/0.jpg)](https://www.youtube.com/watch?v=pXjF9WiAUCM)]
+[(https://img.youtube.com/vi/pXjF9WiAUCM/0.jpg)](https://www.youtube.com/watch?v=pXjF9WiAUCM)
 
 # Support and Donate
 I've working on this a lot and also you know me as a creator of Simple Vehicles Addon which is now on 4 years old at August 20 2020, I spent for over hundreds of hours to work but any amount is appreciated so that I can continue to work on it also this template is free to use for anybody.
