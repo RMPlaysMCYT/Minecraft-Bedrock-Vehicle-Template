@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "simple_car:simple_car_convertible2_death",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/simple_car"
+			},
+			"geometry": {
+				"default": "geometry.simple_car_convertible"
+			},
+			"animations": {
+				"death_animation": "animation.simple_car.death_animation",
+				"death_animation_idle": "animation.simple_car_convertible.death_animation_idle",
+				"death_animation_crtller": "controller.animation.simple_car_convertible.death_animation_crtller"
+			},
+			"scripts": {
+				"animate": [
+					"death_animation_crtller"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

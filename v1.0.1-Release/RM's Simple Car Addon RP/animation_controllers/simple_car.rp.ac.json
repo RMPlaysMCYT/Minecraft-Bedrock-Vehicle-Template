@@ -1,0 +1,91 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.simple_car.move_general": {
+			"initial_state": "idle",
+			"states": {
+				"move_front": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"move_back": "query.ground_speed<2.3"
+						}
+					]
+				},
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"move_front": "query.ground_speed<2.3"
+						},
+						{
+							"move_back": "query.ground_speed>=2.3"
+						}
+					]
+				},
+				"move_back": {
+					"animations": [
+						"move_back"
+					],
+					"transitions": [
+						{
+							"move_front": "query.ground_speed>=2.3"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.simple_car.door_mechanica": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"door_idle"
+					],
+					"transitions": [
+						{
+							"open": "query.mark_variant==2"
+						}
+					]
+				},
+				"close": {
+					"animations": [
+						"door_close"
+					],
+					"transitions": [
+						{
+							"open": "query.mark_variant==2"
+						}
+					]
+				},
+				"open": {
+					"animations": [
+						"door_open"
+					],
+					"transitions": [
+						{
+							"close": "query.mark_variant==1"
+						},
+						{
+							"close2": "query.has_rider"
+						}
+					]
+				},
+				"close2": {
+					"animations": [
+						"door_close"
+					],
+					"transitions": [
+						{
+							"open": "!query.has_rider"
+						}
+					]
+				}
+			}
+		}
+	}
+}

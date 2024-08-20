@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.simple_car_convertible.down": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						"variable.x_direction*5",
+						0,
+						"variable.z_direction*-1"
+					]
+				}
+			}
+		},
+		"animation.simple_car_convertible.up": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						"variable.x_direction*-5",
+						0,
+						"variable.z_direction*1"
+					]
+				}
+			}
+		},
+		"animation.simple_car_convertible_v2.down": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						"variable.x_direction*-3||variable.x_direction*3",
+						0,
+						"variable.z_direction"
+					]
+				}
+			}
+		},
+		"animation.simple_car_convertible_v2.up": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						"variable.x_direction*3||variable.x_direction*-3",
+						0,
+						"variable.z_direction"
+					]
+				}
+			}
+		}
+	}
+}

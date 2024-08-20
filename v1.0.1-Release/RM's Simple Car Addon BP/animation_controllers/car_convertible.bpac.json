@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.simple_car_convertible.item": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"car_convertible_ride": "query.has_rider"
+						},
+						{
+							"car_convertible_unride": "!query.has_rider"
+						}
+					]
+				},
+				"car_convertible_ride": {
+					"transitions": [
+						{
+							"car_convertible_unride": "!query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/tag @p[c=1] add CarConvertible",
+						"/say Hint: Use the stick to open the roof and use the snowball to close the roof",
+						"/replaceitem entity @p[r=1,c=1,tag=CarConvertible] slot.hotbar 1 stick 1 1 {\"minecraft:item_lock\":{\"mode\":\"lock_in_slot\"}}",
+						"/replaceitem entity @p[r=1,c=1,tag=CarConvertible] slot.hotbar 2 snowball 1 1 {\"minecraft:item_lock\":{\"mode\":\"lock_in_slot\"}}"
+					]
+				},
+				"car_convertible_unride": {
+					"transitions": [
+						{
+							"car_convertible_ride": "query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/clear @p[c=1,tag=CarConvertible] stick",
+						"/clear @p[c=1,tag=CarConvertible] snowball",
+						"/tag @p[c=1] remove CarConvertible"
+					]
+				}
+			}
+		}
+	}
+}

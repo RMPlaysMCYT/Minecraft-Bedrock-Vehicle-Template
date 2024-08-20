@@ -1,0 +1,67 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.simple_car_convertible.roof_switch_v2": {
+			"states": {
+				"default": {
+					"animations": [
+						"roof_idle"
+					],
+					"transitions": [
+						{
+							"closed": "!q.is_ignited"
+						},
+						{
+							"opened": "q.is_ignited"
+						}
+					]
+				},
+				"closed": {
+					"animations": [
+						"covert2_idle"
+					],
+					"transitions": [
+						{
+							"open": "q.is_ignited"
+						}
+					]
+				},
+				"open": {
+					"animations": [
+						"convert1"
+					],
+					"transitions": [
+						{
+							"opened": "query.any_animation_finished"
+						},
+						{
+							"close": "!q.is_ignited"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"opened": {
+					"animations": [
+						"covert1_idle"
+					],
+					"transitions": [
+						{
+							"close": "!q.is_ignited"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"close": {
+					"animations": [
+						"convert2"
+					],
+					"transitions": [
+						{
+							"closed": "query.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

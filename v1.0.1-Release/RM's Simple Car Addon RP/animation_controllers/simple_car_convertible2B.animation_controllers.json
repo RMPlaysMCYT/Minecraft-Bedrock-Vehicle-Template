@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.vehicle.uptodown": {
+			"initial_state": "default",
+			"states": {
+				"up": {
+					"animations": [
+						"up"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "v.x_mov_n_rot=(v.position_x_delta+v.position_x<=q.position(0)?1:-1)*variable.x_direction>0;v.z_mov_n_rot=(v.position_z_delta+v.position_z<=q.position(2)?1:-1)*variable.z_direction>0;return (v.x_mov_n_rot&&v.z_mov_n_rot&&query.vertical_speed<=1)||(!v.x_mov_n_rot&&!v.z_mov_n_rot&&query.vertical_speed>=-1);"
+						}
+					]
+				},
+				"down": {
+					"animations": [
+						"down"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "v.x_mov_n_rot=(v.position_x_delta+v.position_x<=q.position(0)?1:-1)*variable.x_direction>0;v.z_mov_n_rot=(v.position_z_delta+v.position_z<=q.position(2)?1:-1)*variable.z_direction>0;return (v.x_mov_n_rot&&v.z_mov_n_rot&&query.vertical_speed>=-1)||(!v.x_mov_n_rot&&!v.z_mov_n_rot&&query.vertical_speed<=1);"
+						}
+					]
+				},
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"up": "v.x_mov_n_rot=(v.position_x_delta+v.position_x<=q.position(0)?1:-1)*variable.x_direction>0;v.z_mov_n_rot=(v.position_z_delta+v.position_z<=q.position(2)?1:-1)*variable.z_direction>0;return (v.x_mov_n_rot&&v.z_mov_n_rot&&query.vertical_speed>1)||(!v.x_mov_n_rot&&!v.z_mov_n_rot&&query.vertical_speed<-1);"
+						},
+						{
+							"down": "v.x_mov_n_rot=(v.position_x_delta+v.position_x<=q.position(0)?1:-1)*variable.x_direction>0;v.z_mov_n_rot=(v.position_z_delta+v.position_z<=q.position(2)?1:-1)*variable.z_direction>0;return (v.x_mov_n_rot&&v.z_mov_n_rot&&query.vertical_speed<-1)||(!v.x_mov_n_rot&&!v.z_mov_n_rot&&q.vertical_speed>1);"
+						}
+					]
+				}
+			}
+		}
+	}
+}

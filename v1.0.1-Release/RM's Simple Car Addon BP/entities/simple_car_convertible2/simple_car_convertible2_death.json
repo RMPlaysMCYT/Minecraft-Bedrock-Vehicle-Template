@@ -1,0 +1,76 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "simple_car:simple_car_convertible2_death",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"scripts": {
+				"animate": [
+					"item"
+				]
+			}
+		},
+		"component_groups": {
+			"simple_car:deathed": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"simple_car",
+					"simple_vehicles",
+					"vehicles",
+					"cars",
+					"car"
+				]
+			},
+			"minecraft:leashable": {
+				"soft_distance": 4,
+				"hard_distance": 6,
+				"max_distance": 10
+			},
+			"minecraft:balloonable": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"push_towards_closest_space": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:health": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"height": 2,
+				"width": 2.5
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": [
+					10,
+					10
+				],
+				"time_down_event": {
+					"event": "simple_car:death",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {},
+			"simple_car:death": {
+				"add": {
+					"component_groups": [
+						"simple_car:deathed"
+					]
+				}
+			}
+		}
+	}
+}

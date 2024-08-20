@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "simple_car:simple_car1",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/simple_car"
+			},
+			"geometry": {
+				"default": "geometry.simple_car"
+			},
+			"animations": {
+				"door_idle": "animation.simple_car.door_idle",
+				"door_close": "animation.simple_car.door_close",
+				"door_open": "animation.simple_car.door_open",
+				"door_mechanica": "controller.animation.simple_car.door_mechanica",
+				"turn": "animation.simple_car.turn",
+				"idle": "animation.simple_car.idle",
+				"move": "animation.simple_car.move",
+				"move_back": "animation.simple_car.move_back",
+				"move_general": "controller.animation.simple_car.move_general"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.moving_veh = query.modified_distance_moved;",
+					"variable.move_front = variable.moving_veh * 25;",
+					"variable.move_back = variable.moving_veh * -25;"
+				],
+				"animate": [
+					"turn",
+					"move_general",
+					"door_mechanica"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#CD6464",
+				"overlay_color": "#AE8B8B"
+			}
+		}
+	}
+}

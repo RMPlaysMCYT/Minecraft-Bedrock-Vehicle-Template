@@ -1,0 +1,20 @@
+pack.name=RM's Simple Car Addon RP
+pack.description=Addon by RMPlaysMC YT with several tools and technologies used in this addon pack, Drive up an see the difference
+
+item.spawn_egg.entity.simple_car:simple_car_convertible2_death.name=Spawn Simple Car Convertible2 Death
+entity.simple_car:simple_car_convertible2_death.name=Simple Car Convertible2 Death
+
+entity.simple_car:simple_car1.name=Simple Car1
+entity.simple_car:simple_car_convertible.name=Simple Car Convertible
+entity.simple_car:simple_car_convertible2.name=Simple Car Convertible2
+entity.simple_car:simple_car_convertible3.name=Simple Car Convertible3
+entity.simple_car:simple_car_convertible3b.name=Simple Car Convertible3b
+entity.simple_car:simple_car_convertible3c.name=Simple Car Convertible3c
+
+
+item.spawn_egg.entity.simple_car:simple_car1.name=Spawn Simple Car1
+item.spawn_egg.entity.simple_car:simple_car_convertible.name=Spawn Simple Car Convertible
+item.spawn_egg.entity.simple_car:simple_car_convertible2.name=Spawn Simple Car Convertible 2 with death animation
+item.spawn_egg.entity.simple_car:simple_car_convertible3.name=Spawn Simple Car Convertible 3 A adjusted with death animations
+item.spawn_egg.entity.simple_car:simple_car_convertible3b.name=Spawn Simple Car Convertible 3 B adjusted with death animations and improved tilted
+item.spawn_egg.entity.simple_car:simple_car_convertible3c.name=Spawn Simple Car Convertible 3 C adjusted

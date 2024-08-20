@@ -1,0 +1,73 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "simple_car:simple_car_convertible3c",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/simple_car"
+			},
+			"geometry": {
+				"default": "geometry.simple_car_convertible"
+			},
+			"animations": {
+				"door_idle": "animation.simple_car.door_idle",
+				"door_close": "animation.simple_car.door_close",
+				"door_open": "animation.simple_car.door_open",
+				"door_mechanica": "controller.animation.simple_car.door_mechanica",
+				"turn": "animation.simple_car.turn",
+				"idle": "animation.simple_car.idle",
+				"move": "animation.simple_car.move",
+				"move_back": "animation.simple_car.move_back",
+				"move_general": "controller.animation.simple_car.move_general",
+				"roof_idle": "animation.simple_car_convertible.roof_idle",
+				"convert1": "animation.simple_car_convertible.convert1",
+				"convert2": "animation.simple_car_convertible.convert2",
+				"covert1_idle": "animation.simple_car_convertible.covert1_idle",
+				"covert2_idle": "animation.simple_car_convertible.covert2_idle",
+				"roof_switch": "controller.animation.simple_car_convertible.roof_switch_v2",
+				"up": "animation.simple_car_convertible_v2.up",
+				"down": "animation.simple_car_convertible_v2.down",
+				"uptodown_controller": "controller.animation.vehicle.uptodown"
+			},
+			"scripts": {
+				"initialize": [
+					"v.position_x_delta = 0;",
+					"v.position_z_delta = 0;",
+					"v.position_x = q.position(0);",
+					"v.position_z = q.position(2);"
+				],
+				"pre_animation": [
+					"variable.moving_veh = query.modified_distance_moved;",
+					"variable.move_front = variable.moving_veh * 25;",
+					"variable.move_back = variable.moving_veh * -25;",
+					"v.position_x_delta = v.position_x != q.position(0) ? q.position(0) - v.position_x : v.position_x_delta;",
+					"v.position_z_delta = v.position_z != q.position(2) ? q.position(2) - v.position_z : v.position_z_delta;",
+					"v.position_x = q.position(0);",
+					"v.position_z = q.position(2);",
+					"variable.x_direction = math.sin(q.body_y_rotation) <= 0 ? -1 : (math.sin(q.body_y_rotation) > 0 ? 1);",
+					"variable.z_direction = math.cos(q.body_y_rotation) >= 0 ? -1 : (math.cos(q.body_y_rotation) < 0 ? 1);"
+				],
+				"animate": [
+					"roof_switch",
+					"turn",
+					"move_general",
+					"door_mechanica",
+					{
+						"move": "query.is_moving"
+					},
+					"uptodown_controller"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#CD6464",
+				"overlay_color": "#AE8B8B"
+			}
+		}
+	}
+}
